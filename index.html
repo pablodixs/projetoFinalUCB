@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/homepage.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Drogaria Leofarma</title>
+  </head>
+  <body>
+    <header>
+      <section class="header-content">
+        <div class="logo">Leofarma</div>
+        <nav class="navbar">
+          <div class="popup-menu hide">
+            <ul>
+              <li><a href="">Página Inicial</a></li>
+              <li><a href="">Medicamentos</a></li>
+              <li><a href="">Higiene e Beleza</a></li>
+              <li><a href="">Promoções</a></li>
+              <li><a href="">Sobre</a></li>
+            </ul>
+          </div>
+          <button onclick="handleOpenMenu()" id="menu-button">
+            <i class="ph ph-list"></i>
+          </button>
+          <input placeholder="Buscar por todos os produtos" type="text" />
+          <div class="cart">
+            <i class="ph ph-shopping-cart"></i>
+            <div>
+              <h5>Meu carrinho</h5>
+              <span>R$ 0,00</span>
+            </div>
+          </div>
+        </nav>
+      </section>
+    </header>
+    <section class="trending-products">
+      <div class="container trending-content">
+        <h4>Produtos em tendência</h4>
+        <a href="#">Naridrin 12H</a>
+        <a href="#">Cloridrato de sildenafila</a>
+        <a href="#">Carmed Fini</a>
+        <a href="#">Cerave Loção Hidratante</a>
+      </div>
+    </section>
+    <section class="container">
+      <div class="hero">
+        <img
+          src="https://www.neosaldina.com.br/assets/images/banner-home-2.2.webp"
+        />
+      </div>
+    </section>
+    <section class="container">
+      <div class="feature">
+        <header>
+          <h1>Em destaque</h1>
+        </header>
+        <main>
+          <a href="#" class="product">
+            <img
+              src="https://io.convertiez.com.br/m/drogal/shop/products/images/4060385/medium/naridrin-adulto-15ml_63383.png"
+            />
+            <div>
+              <h2>Naridrin Adulto 15ml</h2>
+              <h1>R$ 19,87</h1>
+            </div>
+            <button>
+              <i class="ph ph-basket"></i>
+              Adicionar no carrinho
+            </button>
+          </a>
+          <a href="#" class="product">
+            <img
+              src="https://paguemenos.vtexassets.com/arquivos/ids/327781/788b62739eee5de476adac92c58ad8ce_allegra-allegra-120mg-com-10-comprimidos_lett_2.jpg?v=637692894477470000"
+            />
+            <div>
+              <h2>Allegra 120mg 10 comprimidos</h2>
+              <h1>R$ 49,10</h1>
+            </div>
+            <button>
+              <i class="ph ph-basket"></i>
+              Adicionar no carrinho
+            </button>
+          </a>
+          <a href="#" class="product">
+            <img
+              src="https://www.drogariaminasbrasil.com.br/media/product/d84/vick-vaporub-unguento-c-50-g-272.jpg"
+            />
+            <div>
+              <h2>Vick VapoRub</h2>
+              <h1>R$ 24,99</h1>
+            </div>
+            <button>
+              <i class="ph ph-basket"></i>
+              Adicionar no carrinho
+            </button>
+          </a>
+          <a href="#" class="product">
+            <img
+              src="https://drogariaspacheco.vteximg.com.br/arquivos/ids/850110-1000-1000/129810---neosaldina-takeda-4-drageas-1.jpg?v=637883434290430000"
+            />
+            <div>
+              <h2>Neosaldina 4 comprimidos</h2>
+              <h1>R$ 7,90</h1>
+            </div>
+            <button>
+              <i class="ph ph-basket"></i>
+              Adicionar no carrinho
+            </button>
+          </a>
+        </main>
+      </div>
+    </section>
+    <section class="container">
+      <div class="feature">
+        <header>
+          <h1>Promoções</h1>
+        </header>
+        <main>
+          <a href="#" class="product">
+            <img
+              src="https://www.loja.curaprox.com.br/uploads/1664797740.jpeg"
+            />
+            <div>
+              <h2>Kit Curaprox</h2>
+              <h1>R$ 114,49</h1>
+            </div>
+            <button>
+              <i class="ph ph-basket"></i>
+              Adicionar no carrinho
+            </button>
+          </a>
+          <a href="#" class="product">
+            <img
+              src="https://cf.shopee.com.br/file/br-11134207-7qukw-lhf1vhxs91y562"
+            />
+            <div>
+              <h2>Carmed Fini</h2>
+              <h1>R$ 24,90</h1>
+            </div>
+            <button>
+              <i class="ph ph-basket"></i>
+              Adicionar no carrinho
+            </button>
+          </a>
+          <a href="#" class="product">
+            <img
+              src="https://drogariasp.vteximg.com.br/arquivos/ids/876910-1000-1000/2810---buscopan-composto-20-drageas-1.jpg?v=638165815212070000"
+            />
+            <div>
+              <h2>Buscopan Composto</h2>
+              <h1>R$ 21,95</h1>
+            </div>
+            <button>
+              <i class="ph ph-basket"></i>
+              Adicionar no carrinho
+            </button>
+          </a>
+          <a href="#" class="product">
+            <img
+              src="https://io.convertiez.com.br/m/farmaponte/shop/products/images/18328/medium/maxalgina-solucao-oral-500mgml-caixa-com-1-frasco-gotejador-com-20ml-de-solucao-de-uso-oral_13509.png"
+            />
+            <div>
+              <h2>Maxalgina Gotas</h2>
+              <h1>R$ 5,10</h1>
+            </div>
+            <button>
+              <i class="ph ph-basket"></i>
+              Adicionar no carrinho
+            </button>
+          </a>
+        </main>
+      </div>
+    </section>
+    <section class="container">
+      <img
+        class="promo"
+        src="https://www.floratil.com.br/assets/img/home/highlight/banner-07-desktop.png"
+        alt=""
+      />
+    </section>
+
+    <footer>
+      <section class="container">
+        <div class="alert">
+          <p>
+            As informações contidas neste site não devem ser usadas para
+            automedicação e não substituem, em hipótese alguma, as orientações
+            dadas pelo profissional da área médica. Somente o médico está apto a
+            diagnosticar qualquer problema de saúde e prescrever o tratamento
+            adequado.
+          </p>
+        </div>
+        <div class="alert">
+          <p>Ao persistirem os sintomas, um médico deverá ser consultado.</p>
+        </div>
+        <div class="info">
+          <strong>FVN COMERCIO DE PRODUTOS FARMACEUTICOS LTDA.</strong>
+          <!-- <p>44.969.043/0001-55</p> -->
+          <p>QN 829 Conjunto 01 Lote 06, Samambaia Norte, Brasília - DF</p>
+        </div>
+        <p>&copy; 2023 Drogaria Leofarma. Todos os direitos reservados.</p>
+      </section>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>
