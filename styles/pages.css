@@ -1,0 +1,13 @@
+#product-item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product {
+  min-width: 342px;
+}
+
+.product a {
+  margin: 0;
+}

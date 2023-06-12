@@ -14,7 +14,7 @@
       href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <title>Drogaria Leofarma</title>
@@ -22,21 +22,26 @@
   <body>
     <header>
       <section class="header-content">
-        <div class="logo">Leofarma</div>
+        <a href="/" class="logo">Leofarma</a>
         <nav class="navbar">
           <div class="popup-menu hide">
             <ul>
-              <li><a href="">Página Inicial</a></li>
-              <li><a href="">Medicamentos</a></li>
-              <li><a href="">Higiene e Beleza</a></li>
-              <li><a href="">Promoções</a></li>
-              <li><a href="">Sobre</a></li>
+              <li><a href="/">Página Inicial</a></li>
+              <li><a href="/medicamentos.html">Medicamentos</a></li>
+              <li><a href="/perfumaria.html">Higiene e Beleza</a></li>
+              <li><a href="/promocoes.html">Promoções</a></li>
+              <li><a href="/sobre.html">Sobre</a></li>
             </ul>
           </div>
           <button onclick="handleOpenMenu()" id="menu-button">
             <i class="ph ph-list"></i>
           </button>
-          <input placeholder="Buscar por todos os produtos" type="text" />
+          <input
+            placeholder="Buscar por todos os produtos"
+            type="text"
+            id="search-bar"
+          />
+          <ul id="search-results"></ul>
           <div class="cart">
             <i class="ph ph-shopping-cart"></i>
             <div>
@@ -50,17 +55,24 @@
     <section class="trending-products">
       <div class="container trending-content">
         <h4>Produtos em tendência</h4>
-        <a href="#">Naridrin 12H</a>
-        <a href="#">Cloridrato de sildenafila</a>
-        <a href="#">Carmed Fini</a>
-        <a href="#">Cerave Loção Hidratante</a>
+        <a href="/product.html?id=naridrin-12h">Naridrin 12H</a>
+        <a href="/product.html?id=cloridrato-sildenafila"
+          >Cloridrato de sildenafila</a
+        >
+        <a href="/product.html?id=carmed-fini">Carmed Fini</a>
+        <a href="/product.html?id=cerave-hidratante">Cerave Loção Hidratante</a>
+        <div class="phone">
+          <span>(61) 3459-3868</span>
+        </div>
       </div>
     </section>
     <section class="container">
       <div class="hero">
-        <img
-          src="https://www.neosaldina.com.br/assets/images/banner-home-2.2.webp"
-        />
+        <a href="/product.html?id=neosaldina">
+          <img
+            src="https://www.neosaldina.com.br/assets/images/banner-home-2.2.webp"
+          />
+        </a>
       </div>
     </section>
     <section class="container">
@@ -69,7 +81,7 @@
           <h1>Em destaque</h1>
         </header>
         <main>
-          <a href="#" class="product">
+          <a href="/product.html?id=naridrin-adulto" class="product">
             <img
               src="https://io.convertiez.com.br/m/drogal/shop/products/images/4060385/medium/naridrin-adulto-15ml_63383.png"
             />
@@ -82,7 +94,7 @@
               Adicionar no carrinho
             </button>
           </a>
-          <a href="#" class="product">
+          <a href="/product.html?id=allegra-120" class="product">
             <img
               src="https://paguemenos.vtexassets.com/arquivos/ids/327781/788b62739eee5de476adac92c58ad8ce_allegra-allegra-120mg-com-10-comprimidos_lett_2.jpg?v=637692894477470000"
             />
@@ -95,7 +107,7 @@
               Adicionar no carrinho
             </button>
           </a>
-          <a href="#" class="product">
+          <a href="/product.html?id=vick-vaporub" class="product">
             <img
               src="https://www.drogariaminasbrasil.com.br/media/product/d84/vick-vaporub-unguento-c-50-g-272.jpg"
             />
@@ -108,7 +120,7 @@
               Adicionar no carrinho
             </button>
           </a>
-          <a href="#" class="product">
+          <a href="/product.html?id=neosaldina" class="product">
             <img
               src="https://drogariaspacheco.vteximg.com.br/arquivos/ids/850110-1000-1000/129810---neosaldina-takeda-4-drageas-1.jpg?v=637883434290430000"
             />
@@ -130,7 +142,7 @@
           <h1>Promoções</h1>
         </header>
         <main>
-          <a href="#" class="product">
+          <a href="/product.html?id=curaprox" class="product">
             <img
               src="https://www.loja.curaprox.com.br/uploads/1664797740.jpeg"
             />
@@ -143,7 +155,7 @@
               Adicionar no carrinho
             </button>
           </a>
-          <a href="#" class="product">
+          <a href="/product.html?id=carmed-fini" class="product">
             <img
               src="https://cf.shopee.com.br/file/br-11134207-7qukw-lhf1vhxs91y562"
             />
@@ -156,7 +168,7 @@
               Adicionar no carrinho
             </button>
           </a>
-          <a href="#" class="product">
+          <a href="/product.html?id=buscopan-composto" class="product">
             <img
               src="https://drogariasp.vteximg.com.br/arquivos/ids/876910-1000-1000/2810---buscopan-composto-20-drageas-1.jpg?v=638165815212070000"
             />
@@ -169,7 +181,7 @@
               Adicionar no carrinho
             </button>
           </a>
-          <a href="#" class="product">
+          <a href="/product.html?id=maxalgina" class="product">
             <img
               src="https://io.convertiez.com.br/m/farmaponte/shop/products/images/18328/medium/maxalgina-solucao-oral-500mgml-caixa-com-1-frasco-gotejador-com-20ml-de-solucao-de-uso-oral_13509.png"
             />
@@ -186,11 +198,13 @@
       </div>
     </section>
     <section class="container">
-      <img
-        class="promo"
-        src="https://www.floratil.com.br/assets/img/home/highlight/banner-07-desktop.png"
-        alt=""
-      />
+      <a href="/product.html?id=floratil">
+        <img
+          class="promo"
+          src="https://www.floratil.com.br/assets/img/home/highlight/banner-07-desktop.png"
+          alt=""
+        />
+      </a>
     </section>
 
     <footer>

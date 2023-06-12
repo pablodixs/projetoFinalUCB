@@ -1,4 +1,4 @@
-const data = [
+const medicamentos = [
   {
     id: 'naridrin-adulto',
     productName: 'Naridrin Adulto',
@@ -72,29 +72,6 @@ const data = [
       'CITRATO DE SILDENAFILA 50MG É UM MEDICAMENTO. SEU USO PODE TRAZER RISCOS. PROCURE UM MÉDICO OU UM FARMACÊUTICO. LEIA A BULA. MEDICAMENTOS PODEM CAUSAR EFEITOS INDESEJADOS. EVITE A AUTOMEDICAÇÃO: INFORME-SE COM O FARMACÊUTICO.',
   },
   {
-    id: 'carmed-fini',
-    productName: 'Hidratante labial Carmed Fini',
-    imageUrl: 'https://cf.shopee.com.br/file/br-11134207-7qukw-lhf1vhxs91y562',
-    size: '10g',
-    defaultPrice: 24.99,
-    discountPrice: 24.99,
-    owner: 'Cimed',
-    description:
-      'Protetor labial com alto poder de hidratação, cheirinho Fini Beijos. Possui cor rosa e efeito gloss e com manteiga de cacau. Não testado em animais e sem parabenos e conservantes',
-  },
-  {
-    id: 'cerave-hidratante',
-    productName: 'Loção Hidratante CeraVe',
-    imageUrl:
-      'https://m.media-amazon.com/images/I/61vyW3Dl-7L._AC_UF1000,1000_QL80_.jpg',
-    size: '473ml',
-    defaultPrice: 87.99,
-    discountPrice: 87.99,
-    owner: 'CeraVe',
-    description:
-      'Desenvolvido com dermatologistas, CeraVe Loção Hidratante hidrata e ajuda a restaurar a barreira protetora da pele. Esta fórmula leve e não oleosa contém as 3 ceramidas essenciais para a pele e ácido hialurônico, promovendo hidratação o dia todo através de sua exclusiva tecnologia MVE, de liberação prolongada de ativos hidratantes.',
-  },
-  {
     id: 'buscopan-composto',
     productName: 'Buscopan Composto',
     imageUrl:
@@ -130,74 +107,26 @@ const data = [
     description:
       'Floratil está indicado como auxiliar no tratamento de diarreias de diferentes causas e na restauração da flora intestinal.',
   },
-  {
-    id: 'erastour',
-    productName: 'Taylor Swift | The Eras Tour',
-    imageUrl:
-      'https://upload.wikimedia.org/wikipedia/pt/f/fb/The_Eras_Tour.jpg',
-    size: '1 ingresso, cadeira inferior',
-    defaultPrice: 800,
-    discountPrice: 2999.0,
-    owner: 'Taylor Swift',
-    description:
-      'The Eras Tour é a sexta turnê em curso da cantora e compositora estadunidense Taylor Swift, assim como a sua segunda turnê em estádios após a Reputation Stadium Tour.',
-  },
-  {
-    id: 'curaprox',
-    productName: 'Kit Curaprox Azul Extramacia',
-    imageUrl: 'https://www.loja.curaprox.com.br/uploads/1664797740.jpeg',
-    size: '6 unidades',
-    defaultPrice: 245.9,
-    discountPrice: 214.99,
-    owner: 'Curaprox',
-    description:
-      'Desenvolvida para uma higiene oral totalmente atraumática. Com 5460 filamentos ativos ultrasoft possui ação seletiva sobre a placa bacteriana não provocando retração gengival em longo prazo. Os filamentos das cerdas das escovas são feitos de CUREN e mesmo molhados mantêm a sua superior firmeza original. Isto permite o uso de cerdas muito mais finas que possibilitam uma escovação profunda e com maciez. Com a sua cabeça pequena e compacta, a CURAPROX Sensitive limpa de forma mais intensa e suave. Ao escovar com a CURAPROX CS, a sua língua notará a diferença: os seus dentes ficarão mais limpos, lisos e parecerão mais brancos. Inovação com cerdas macias de extremidades arredondadas. Ultra suave e ao mesmo tempo resistente e com grande capacidade e poder de limpeza.',
-  },
 ]
 
-// MENU POP-UP
+const productItem = document.getElementById('product-item')
 
-const menuContainer = document.querySelector('.popup-menu')
+medicamentos.forEach((item) => {
+  const container = document.createElement('div')
 
-function handleOpenMenu() {
-  menuContainer.classList.toggle('hide')
-}
+  container.innerHTML = `
+    <a href="/product.html?id=${item.id}" class="product">
+      <img src="${item.imageUrl}" />
+      <div>
+        <h2>${item.productName}</h2>
+        <h1>${item.discountPrice}</h1>
+      </div>
+      <button>
+        <i class="ph ph-basket"></i>
+        Adicionar no carrinho
+      </button>
+    </a>
+  `
 
-// MECANISMO DE PESQUISA DE PRODUTOS
-
-const searchBar = document.getElementById('search-bar')
-const searchResults = document.getElementById('search-results')
-
-searchBar.addEventListener('input', function (event) {
-  const searchTerm = event.target.value.toLowerCase()
-  const filteredData = data.filter((item) =>
-    item.productName.toLowerCase().includes(searchTerm)
-  )
-
-  displaySearchResults(filteredData)
+  productItem.appendChild(container)
 })
-
-function displaySearchResults(results) {
-  searchResults.innerHTML = ''
-
-  if (searchBar.value !== '') {
-    searchResults.style.display = 'block'
-  }
-
-  if (searchBar.value === '') {
-    searchResults.style.display = 'none'
-  }
-
-  if (results.length > 0) {
-    for (let i = 0; i < results.length; i++) {
-      const listItem = document.createElement('a')
-      listItem.textContent = results[i].productName
-      searchResults.appendChild(listItem)
-      listItem.setAttribute('href', `/product.html?id=${results[i].id}`)
-    }
-  } else {
-    const listItem = document.createElement('span')
-    listItem.textContent = 'Nenhum resultado encontrado'
-    searchResults.appendChild(listItem)
-  }
-}
