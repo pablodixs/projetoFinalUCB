@@ -12,6 +12,18 @@ const medicamentos = [
       'Naridrin® é indicado como vasoconstritor destinado ao tratamento da congestão nasal de origem alérgica ou inflamatória, nas rinites e rinofaringites. Também indicado para o tratamento auxiliar da congestão nasal provocada por gripes e resfriados.',
   },
   {
+    id: 'dorflex-36',
+    productName: 'Dorflex',
+    imageUrl:
+      'https://paguemenos.vtexassets.com/arquivos/ids/354546-1200-auto?v=637807995947470000&width=1200&height=auto&aspect=true',
+    size: '36 comprimidos',
+    defaultPrice: 25.1,
+    discountPrice: 19.99,
+    owner: 'Sanofi',
+    description:
+      'Dorflex é um relaxante muscular, analgésico e antitérmico. É indicado para o alívio de dores associadas a contraturas musculares (incluindo dor de cabeça tensional) e quadros de febre.',
+  },
+  {
     id: 'allegra-120',
     productName: 'Allegra 120mg',
     imageUrl:
@@ -24,6 +36,18 @@ const medicamentos = [
       'Allegra é o antialérgico nº1 do mercado trazendo alívio rápido da alergia e não dá sono, indicado para os sintomas da Rinite Alérgica e urticária, tem rápida ação para nariz entupido, coriza, espirro e coceiras nos olhos, nariz, garganta e pele - com eficácia e segurança.',
   },
   {
+    id: 'tylenol-bebe',
+    productName: 'Tylenol Bebê Líquido',
+    imageUrl:
+      'https://paguemenos.vtexassets.com/arquivos/ids/668754-1200-auto?v=638100722216200000&width=1200&height=auto&aspect=true',
+    size: '15ml',
+    defaultPrice: 56.84,
+    discountPrice: 37.95,
+    owner: 'Johnson & Johnson',
+    description:
+      'O Paracetamol, ingrediente-base de TYLENOL, é a única substância recomendada por pediatras para bebês com menos de 3 meses de idade*, podendo ser usado desde o nascimento. O TYLENOL Bebê reduz a febre e alivia as dores comuns da infância, como o nascimento dos dentes, cólicas e algumas reações pós-vacina. A inconfundível embalagem vem com seringa dosadora, tornando a administração do remédio mais segura e ágil.',
+  },
+  {
     id: 'vick-vaporub',
     productName: 'Vick VapoRub Pomada Descongestionante',
     imageUrl:
@@ -34,6 +58,18 @@ const medicamentos = [
     owner: 'Vick',
     description:
       'Vick Vaporub é destinado ao alívio da tosse e do mal-estar muscular que acompanham gripes e resfriados, além da congestão nasal.',
+  },
+  {
+    id: 'lisador-dip',
+    productName: 'Lisador Dip 1g',
+    imageUrl:
+      'https://paguemenos.vtexassets.com/arquivos/ids/658975-1200-auto?v=638035131105700000&width=1200&height=auto&aspect=true',
+    size: '20 comprimidos',
+    defaultPrice: 42.40,
+    discountPrice: 27.90,
+    owner: 'Sanofi',
+    description:
+      'Lisador é um medicamento indicado para o tratamento de dores; como cólicas, dor de cabeça, musculares, articulares, pós-operatórias e dores em geral. Sua ação tem início a partir de 20 a 30 minutos e seu efeito analgésico perdura de 4 a 6 horas após a administração.',
   },
   {
     id: 'neosaldina',
@@ -109,7 +145,11 @@ const medicamentos = [
   },
 ]
 
-const productItem = document.getElementById('product-item')
+const productItem = document.getElementById('product-itens')
+const price = new Intl.NumberFormat('pt-BR', {
+  style: 'currency',
+  currency: 'BRL',
+})
 
 medicamentos.forEach((item) => {
   const container = document.createElement('div')
@@ -119,7 +159,7 @@ medicamentos.forEach((item) => {
       <img src="${item.imageUrl}" />
       <div>
         <h2>${item.productName}</h2>
-        <h1>${item.discountPrice}</h1>
+        <h1>${price.format(item.discountPrice)}</h1>
       </div>
       <button>
         <i class="ph ph-basket"></i>

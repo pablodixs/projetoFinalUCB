@@ -1,13 +1,33 @@
-#product-item {
+:root {
+  --primary-red: #c8102e;
+  --primary-blue: #13294b;
+}
+
+.heading {
+  font-size: 32px;
+  margin: 1.5rem 0 1rem;
+  color: var(--primary-blue);
+}
+
+#product-itens {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#product-itens div {
+  max-width: 18rem;
 }
 
 .product {
-  min-width: 342px;
+  min-width: 18rem;
+  height: 24rem;
+  display: inline-flex;
+  justify-content: space-between;
 }
 
-.product a {
-  margin: 0;
+.product h1 {
+  color: var(--primary-red);
 }

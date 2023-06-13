@@ -12,6 +12,7 @@ if (pagina) {
   document.getElementById('size').textContent = pagina.size
   document.getElementById('owner').textContent = pagina.owner
   document.getElementById('description').textContent = pagina.description
+  document.getElementById('breadcrumb').textContent = pagina.productName
   document.getElementById('product-image').setAttribute('src', pagina.imageUrl)
   document.getElementById('default-price').textContent = `de ${price.format(
     pagina.defaultPrice

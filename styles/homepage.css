@@ -288,10 +288,11 @@ header {
 
 footer {
   width: 100%;
-  background-color: var(--primary-red);
+  background-color: var(--primary-blue);
   padding: 2rem 0;
   text-align: center;
   color: #fff;
+  margin-top: 1rem;
 }
 
 .alert {
