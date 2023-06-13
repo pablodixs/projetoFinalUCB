@@ -118,6 +118,14 @@ header {
   text-decoration: none;
   padding: 0.5rem;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.popup-menu i {
+  font-size: 1.125rem;
+  color: var(--primary-red);
 }
 
 .popup-menu li a:hover {
@@ -240,6 +248,10 @@ header {
 .product img {
   width: 70%;
   object-fit: contain;
+}
+
+.product span {
+  font-size: 0.875rem;
 }
 
 .product div {

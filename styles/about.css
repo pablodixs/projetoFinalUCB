@@ -1,0 +1,55 @@
+:root {
+  --primary-red: #c8102e;
+  --primary-blue: #13294b;
+}
+
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+article h1 {
+  font-size: 2.625rem;
+  text-align: center;
+  margin: 2rem 0;
+  letter-spacing: -1px;
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+article p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  color: rgb(39, 39, 39);
+}
+
+article img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex img {
+  width: 49%;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.picture {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 100px;
+  margin-bottom: 0.5rem;
+}

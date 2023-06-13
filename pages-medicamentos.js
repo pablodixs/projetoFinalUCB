@@ -65,8 +65,8 @@ const medicamentos = [
     imageUrl:
       'https://paguemenos.vtexassets.com/arquivos/ids/658975-1200-auto?v=638035131105700000&width=1200&height=auto&aspect=true',
     size: '20 comprimidos',
-    defaultPrice: 42.40,
-    discountPrice: 27.90,
+    defaultPrice: 42.4,
+    discountPrice: 27.9,
     owner: 'Sanofi',
     description:
       'Lisador é um medicamento indicado para o tratamento de dores; como cólicas, dor de cabeça, musculares, articulares, pós-operatórias e dores em geral. Sua ação tem início a partir de 20 a 30 minutos e seu efeito analgésico perdura de 4 a 6 horas após a administração.',
@@ -159,6 +159,7 @@ medicamentos.forEach((item) => {
       <img src="${item.imageUrl}" />
       <div>
         <h2>${item.productName}</h2>
+        <span>${item.size}</span>
         <h1>${price.format(item.discountPrice)}</h1>
       </div>
       <button>

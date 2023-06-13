@@ -22,11 +22,30 @@
         <nav class="navbar">
           <div class="popup-menu hide">
             <ul>
-              <li><a href="/">Página Inicial</a></li>
-              <li><a href="">Medicamentos</a></li>
-              <li><a href="">Higiene e Beleza</a></li>
-              <li><a href="">Promoções</a></li>
-              <li><a href="">Sobre</a></li>
+              <li>
+                <a href="/">
+                  <i class="ph-bold ph-house"></i>
+                  Página Inicial
+                </a>
+              </li>
+              <li>
+                <a href="/medicamentos.html">
+                  <i class="ph-bold ph-pill"></i>
+                  Medicamentos
+                </a>
+              </li>
+              <li>
+                <a href="/perfumaria.html">
+                  <i class="ph-bold ph-drop-half-bottom"></i>
+                  Higiene e Beleza
+                </a>
+              </li>
+              <li>
+                <a href="/sobre.html">
+                  <i class="ph-bold ph-question"></i>
+                  Sobre</a
+                >
+              </li>
             </ul>
           </div>
           <button onclick="handleOpenMenu()" id="menu-button">
@@ -37,7 +56,7 @@
             type="text"
             id="search-bar"
           />
-          <ul id="search-results" class="hide"></ul>
+          <ul id="search-results"></ul>
           <div class="cart">
             <i class="ph ph-shopping-cart"></i>
             <div>
@@ -96,7 +115,7 @@
       </section>
     </footer>
     <script src="./main.js"></script>
-    <script src="./pages.js"></script>
+    <script src="./pages-perfumaria.js"></script>
     <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
   </body>
 </html>

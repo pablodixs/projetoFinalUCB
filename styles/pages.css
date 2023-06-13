@@ -23,9 +23,13 @@
 
 .product {
   min-width: 18rem;
-  height: 24rem;
+  height: 26rem;
   display: inline-flex;
   justify-content: space-between;
+}
+
+.product img {
+  max-height: 11.125rem;
 }
 
 .product h1 {
